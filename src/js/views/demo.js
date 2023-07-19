@@ -9,7 +9,7 @@ export const Demo = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container">
+		<div className="container-fluid vh-100 pt-5 bg-dark m-0 px-5 pl-5">
 			<ul className="list-group">
 				{store.demo.map((item, index) => {
 					return (

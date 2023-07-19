@@ -7,8 +7,8 @@ export const Single = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 	return (
-		<div className="jumbotron">
-			<h1 className="display-4">This will show the demo element: {store.demo[params.theid].title}</h1>
+		<div className="jumbotron vh-100 bg-dark pt-5 px-5 pl-5">
+			<h1 className="display-4 text-light">This will show the demo element: {store.demo[params.theid].title}</h1>
 
 			<hr className="my-4" />
 
