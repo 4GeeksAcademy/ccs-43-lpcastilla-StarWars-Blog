@@ -10,6 +10,7 @@ export const Home = () => {
 	useEffect(() => {
 		actions.getCharacters()
 		actions.getPlanets()
+		actions.getSingleCharacter(1)
 		actions.getSinglePlanet(1)
 	}, []);
 

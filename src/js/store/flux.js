@@ -3,6 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			characters: [],
 			planets: [],
+			singleCharacter: {},
 			singlePlanet: {},
 			demo: [
 				{
@@ -61,6 +62,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 					}
 					const body = await response.json()
 					setStore({ planets: body.results});
+				} catch (error) {
+					console.log(error);
+				}
+			},
+			getSingleCharacter: async (uid) => {
+				try {
+					const response = await fetch(`https://www.swapi.tech/api/people/${uid}`)
+					if (response.status != 200) {
+						console.log("Error en la solicitud. Code: ", response.status)
+					}
+					const body = await response.json()
+					setStore({ singleCharacter: body.result });
 				} catch (error) {
 					console.log(error);
 				}
