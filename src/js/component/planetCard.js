@@ -28,4 +28,3 @@ export const PlanetCard = ({data}) => {
     );     
 };
 
-"https://www.freepnglogos.com/uploads/mars-png/mars-terrestrial-planets-21.png" 

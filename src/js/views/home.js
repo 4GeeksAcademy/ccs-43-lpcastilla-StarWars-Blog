@@ -8,8 +8,9 @@ import { Context } from "../store/appContext";
 export const Home = () => {
 	const {store, actions} = useContext(Context);
 	useEffect(() => {
-		actions.getCharacters(console.log)
-		actions.getPlanets(console.log)
+		actions.getCharacters()
+		actions.getPlanets()
+		actions.getSinglePlanet(1)
 	}, []);
 
 	return (

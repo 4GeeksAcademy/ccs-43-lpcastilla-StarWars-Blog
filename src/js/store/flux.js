@@ -67,12 +67,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			getSinglePlanet: async (uid) => {
 				try {
-					const response = await fetch("https://www.swapi.tech/api/planets/${uid}")
+					const response = await fetch(`https://www.swapi.tech/api/planets/${uid}`)
 					if (response.status != 200) {
 						console.log("Error en la solicitud. Code: ", response.status)
 					}
 					const body = await response.json()
-					setStore({ singlePlanet: body.results});
+					setStore({ singlePlanet: body.result });
 				} catch (error) {
 					console.log(error);
 				}
