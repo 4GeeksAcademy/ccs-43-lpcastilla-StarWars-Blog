@@ -33,20 +33,20 @@ export const Planet = () => {
                         <hr style={{ borderTop: "2px solid red", margin: "10px 0" }} />
                         <div className="datawrap text-center p-3">
                             <div className="row">
-                                <div className="col"><strong>Name</strong></div>
-                                <div className="col"><strong>Terrain</strong></div>
-                                <div className="col"><strong>Climate</strong></div>
-                                <div className="col"><strong>Diameter</strong></div>
-                                <div className="col"><strong>Rotation Period</strong></div>
-                                <div className="col"><strong>Orbital Period</strong></div>
+                                <div className="col-sm-6 col-md-2"><strong>Name</strong></div>
+                                <div className="col-sm-6 col-md-2"><strong>Terrain</strong></div>
+                                <div className="col-sm-6 col-md-2"><strong>Climate</strong></div>
+                                <div className="col-sm-6 col-md-2"><strong>Diameter</strong></div>
+                                <div className="col-sm-6 col-md-2"><strong>Rotation Period</strong></div>
+                                <div className="col-sm-6 col-md-2"><strong>Orbital Period</strong></div>
                             </div>
                             <div className="row">
-                                <div className="col">{store.singlePlanet.properties.name}</div>
-                                <div className="col">{store.singlePlanet.properties.terrain}</div>
-                                <div className="col">{store.singlePlanet.properties.climate}</div>
-                                <div className="col">{store.singlePlanet.properties.diameter}</div>
-                                <div className="col">{store.singlePlanet.properties.rotation_period}</div>
-                                <div className="col">{store.singlePlanet.properties.orbital_period}</div>
+                                <div className="col-sm-6 col-md-2">{store.singlePlanet.properties.name}</div>
+                                <div className="col-sm-6 col-md-2">{store.singlePlanet.properties.terrain}</div>
+                                <div className="col-sm-6 col-md-2">{store.singlePlanet.properties.climate}</div>
+                                <div className="col-sm-6 col-md-2">{store.singlePlanet.properties.diameter}</div>
+                                <div className="col-sm-6 col-md-2">{store.singlePlanet.properties.rotation_period}</div>
+                                <div className="col-sm-6 col-md-2">{store.singlePlanet.properties.orbital_period}</div>
                             </div>
                         </div>
                     </div>

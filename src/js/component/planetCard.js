@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../../styles/home.css";
 import { useNavigate } from "react-router";
+import { Context } from "../store/appContext";
 
 export const PlanetCard = ({data}) => {
+    const { actions } = useContext(Context)
     const navigate = useNavigate()
+
+    const addToFavorites = (characterName) => {
+        actions.addToFavorites(characterName); 
+    };
+
     return (
         <div className="card bg-secondary" style={{width: "18rem"}}>
             <img src="https://www.freepnglogos.com/uploads/mars-png/mars-terrestrial-planets-21.png" style={{width:"250px", height:"198"}} className="card-img-top justify-content-center" alt="..."/>
@@ -19,7 +26,7 @@ export const PlanetCard = ({data}) => {
                         <button 
                             className="btn btn-outline-warning"
                             onClick={() => {
-
+                                addToFavorites(data.name);
                             }}    
                         ><i className="fa-regular fa-heart"></i></button>
                     </div>

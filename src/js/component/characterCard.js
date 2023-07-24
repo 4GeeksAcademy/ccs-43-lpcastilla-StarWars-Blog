@@ -1,9 +1,17 @@
-import React from "react";
 import "../../styles/home.css";
 import { useNavigate } from "react-router";
+import React, { useContext } from "react";
+import { Context } from "../store/appContext";
+
 
 export const CharacterCard = ({data}) => {
+    const { actions } = useContext(Context)
     const navigate = useNavigate()
+
+    const addToFavorites = (characterName) => {
+        actions.addToFavorites(characterName); 
+    };
+
     return (
         <div className="card bg-secondary" style={{width: "18rem"}}>
             <img src="https://www.freepnglogos.com/uploads/star-wars-png/star-wars-glasses-specsavers-5.png" className="card-img-top" alt="..."/>
@@ -19,7 +27,7 @@ export const CharacterCard = ({data}) => {
                         <button 
                             className="btn btn-outline-warning"
                             onClick={() => {
-
+                                addToFavorites(data.name);
                             }}    
                         ><i className="fa-regular fa-heart"></i></button>
                     </div>
