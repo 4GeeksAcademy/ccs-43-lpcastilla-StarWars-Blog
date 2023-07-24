@@ -33,20 +33,30 @@ export const Planet = () => {
                         <hr style={{ borderTop: "2px solid red", margin: "10px 0" }} />
                         <div className="datawrap text-center p-3">
                             <div className="row">
-                                <div className="col-sm-6 col-md-2"><strong>Name</strong></div>
-                                <div className="col-sm-6 col-md-2"><strong>Terrain</strong></div>
-                                <div className="col-sm-6 col-md-2"><strong>Climate</strong></div>
-                                <div className="col-sm-6 col-md-2"><strong>Diameter</strong></div>
-                                <div className="col-sm-6 col-md-2"><strong>Rotation Period</strong></div>
-                                <div className="col-sm-6 col-md-2"><strong>Orbital Period</strong></div>
-                            </div>
-                            <div className="row">
-                                <div className="col-sm-6 col-md-2">{store.singlePlanet.properties.name}</div>
-                                <div className="col-sm-6 col-md-2">{store.singlePlanet.properties.terrain}</div>
-                                <div className="col-sm-6 col-md-2">{store.singlePlanet.properties.climate}</div>
-                                <div className="col-sm-6 col-md-2">{store.singlePlanet.properties.diameter}</div>
-                                <div className="col-sm-6 col-md-2">{store.singlePlanet.properties.rotation_period}</div>
-                                <div className="col-sm-6 col-md-2">{store.singlePlanet.properties.orbital_period}</div>
+                                <div className="col-md-2">
+                                    <div className="row"><strong>Name</strong></div>
+                                    <div className="row justify-content-center">{store.singlePlanet.properties.name}</div>
+                                </div>
+                                <div className="col-md-2">
+                                    <div className="row"><strong>Terrain</strong></div>
+                                    <div className="row justify-content-center">{store.singlePlanet.properties.terrain}</div>
+                                </div>
+                                <div className="col-md-2">
+                                    <div className="row"><strong>Climate</strong></div>
+                                    <div className="row justify-content-center">{store.singlePlanet.properties.climate}</div>
+                                </div>
+                                <div className="col-md-2">
+                                    <div className="row"><strong>Diameter</strong></div>
+                                    <div className="row justify-content-center">{store.singlePlanet.properties.diameter}</div>
+                                </div>
+                                <div className="col-md-2">
+                                    <div className="row"><strong>Rotation Period</strong></div>
+                                    <div className="row justify-content-center">{store.singlePlanet.properties.rotation_period}</div>
+                                </div>
+                                <div className="col-md-2">
+                                    <div className="row"><strong>Orbital Period</strong></div>
+                                    <div className="row justify-content-center">{store.singlePlanet.properties.orbital_period}</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -56,3 +66,5 @@ export const Planet = () => {
         </React.Fragment>
     )
 }
+
+                        

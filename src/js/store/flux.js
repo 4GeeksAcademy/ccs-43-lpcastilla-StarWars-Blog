@@ -6,6 +6,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			singleCharacter: {},
 			singlePlanet: {},
 			favorites: [],
+			favoriteLinks: [],
 		},
 		actions: {
 			getCharacters: async () => {
@@ -66,8 +67,28 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const updatedFavorites = store.favorites.filter((_, filteredIndex) => filteredIndex !== index);
 				setStore({ favorites: updatedFavorites });
 			},
+			updateFavoriteLinks: () => {
+				const store = getStore();
+				const favoriteLinks = store.favorites.map((favorite) => {
+				  const character = store.characters.find((char) => char.name === favorite);
+				  const planet = store.planets.find((pl) => pl.name === favorite);
+			
+				  if (character) {
+					return { name: favorite, link: `/people/${character.uid}` };
+				  } else if (planet) {
+					return { name: favorite, link: `/planet/${planet.uid}` };
+				  } else {
+					return null;
+				  }
+				});
+				
+				setStore({ favoriteLinks: favoriteLinks.filter((link) => link !== null) });
+			  },
 		}
 	};
 };
 
 export default getState;
+
+
+

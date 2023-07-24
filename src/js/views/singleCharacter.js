@@ -33,20 +33,30 @@ export const Character = () => {
                         <hr style={{ borderTop: "2px solid red", margin: "10px 0" }} />
                         <div className="datawrap text-center p-3">
                             <div className="row">
-                                <div className="col"><strong>Name</strong></div>
-                                <div className="col"><strong>Birth Year</strong></div>
-                                <div className="col"><strong>Gender</strong></div>
-                                <div className="col"><strong>Height</strong></div>
-                                <div className="col"><strong>Skin Color</strong></div>
-                                <div className="col"><strong>Eye Color</strong></div>
-                            </div>
-                            <div className="row">
-                                <div className="col">{store.singleCharacter.properties.name}</div>
-                                <div className="col">{store.singleCharacter.properties.birth_year}</div>
-                                <div className="col">{store.singleCharacter.properties.gender}</div>
-                                <div className="col">{store.singleCharacter.properties.height}</div>
-                                <div className="col">{store.singleCharacter.properties.skin_color}</div>
-                                <div className="col">{store.singleCharacter.properties.eye_color}</div>
+                                <div className="col-md-2">
+                                    <div className="row"><strong>Name</strong></div>
+                                    <div className="row justify-content-center">{store.singleCharacter.properties.name}</div>
+                                </div>
+                                <div className="col-md-2">
+                                    <div className="row"><strong>Birth Year</strong></div>
+                                    <div className="row justify-content-center">{store.singleCharacter.properties.birth_year}</div>
+                                </div>
+                                <div className="col-md-2">
+                                    <div className="row"><strong>Gender</strong></div>
+                                    <div className="row justify-content-center">{store.singleCharacter.properties.gender}</div>
+                                </div>
+                                <div className="col-md-2">
+                                    <div className="row"><strong>Height</strong></div>
+                                    <div className="row justify-content-center">{store.singleCharacter.properties.height}</div>
+                                </div>
+                                <div className="col-md-2">
+                                    <div className="row"><strong>Skin Color</strong></div>
+                                    <div className="row justify-content-center">{store.singleCharacter.properties.skin_color}</div>
+                                </div>
+                                <div className="col-md-2">
+                                    <div className="row"><strong>Eye Color</strong></div>
+                                    <div className="row justify-content-center">{store.singleCharacter.properties.eye_color}</div>
+                                </div>
                             </div>
                         </div>
                     </div>
