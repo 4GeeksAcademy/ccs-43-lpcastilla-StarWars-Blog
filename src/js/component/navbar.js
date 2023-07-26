@@ -4,7 +4,7 @@ import { Context } from "../store/appContext";
 
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
-
+	
 	return (
 		<nav className="navbar d-flex justify-content-around navbar-light bg-secondary">
 			<div className="wrap d-flex align-items-center justify-content-between" style={{width: "70%"}}>
