@@ -13,7 +13,12 @@ export const PlanetCard = ({data}) => {
 
     return (
         <div className="card bg-secondary" style={{width: "18rem"}}>
-            <img src="https://www.freepnglogos.com/uploads/mars-png/mars-terrestrial-planets-21.png" style={{width:"250px", height:"198"}} className="card-img-top justify-content-center" alt="..."/>
+            <img 
+                src={`https://starwars-visualguide.com/assets/img/planets/${data.uid}.jpg`} 
+                style={{width:"298px", height:"198"}} 
+                className="card-img-top justify-content-center" 
+                alt=""
+            />
                 <div className="card-body">
                     <h5 className="card-title">{data.name}</h5>
                     <div className="d-flex justify-content-between pt-2">

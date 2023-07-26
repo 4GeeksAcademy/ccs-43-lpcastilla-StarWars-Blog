@@ -19,7 +19,7 @@ export const Planet = () => {
                     <div className="card mb-3 bg-secondary" style={{width: "70%"}}>
                         <div className="row g-0">
                             <div className="col-md-4">
-                                <img src="https://www.freepnglogos.com/uploads/mars-png/mars-terrestrial-planets-21.png" className="img-fluid rounded-start" alt="..."/>
+                                <img src={`https://starwars-visualguide.com/assets/img/planets/${store.singlePlanet.uid}.jpg`} className="img-fluid rounded-start" alt="..."/>
                             </div>
                             <div className="col-md-8">
                                 <div className="card-body">

@@ -8,12 +8,10 @@ import { Context } from "../store/appContext";
 export const Home = () => {
 	const {store, actions} = useContext(Context);
 	useEffect(() => {
-		actions.getCharacters()
-		actions.getPlanets()
 	}, []);
 
 	return (
-		<div className="bg-dark vw-100 d-flex align-items-center flex-column">
+		<div className="bg-dark d-flex align-items-center flex-column">
 			<h1 className="characters text-danger pt-5">Characters</h1>
 				<div className="scroll-container">
 					{store.characters.map((character,index) => (

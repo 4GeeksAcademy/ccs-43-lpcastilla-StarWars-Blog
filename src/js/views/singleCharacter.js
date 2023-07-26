@@ -19,7 +19,7 @@ export const Character = () => {
                     <div className="card mb-3 bg-secondary" style={{width: "70%"}}>
                         <div className="row g-0">
                             <div className="col-md-4">
-                                <img src="https://www.freepnglogos.com/uploads/star-wars-png/star-wars-glasses-specsavers-5.png" className="img-fluid rounded-start" alt="..."/>
+                                <img src={`https://starwars-visualguide.com/assets/img/characters/${store.singleCharacter.uid}.jpg`} className="img-fluid rounded-start" alt="..."/>
                             </div>
                             <div className="col-md-8">
                                 <div className="card-body">
